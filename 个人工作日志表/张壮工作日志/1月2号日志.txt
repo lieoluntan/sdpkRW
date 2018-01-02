@@ -1,0 +1,8 @@
+1、工作任务编号
+
+ ui-paike0102 + 上午+张壮 环境搭建（java+firefox+httprequest+apache-tomcat） 完成进度：已完成
+
+ui-paike0102 +下午周课表代码调试+张壮  完成进度：70% ()
+自己验收(署名确认)：
+张壮
+团队验收：
