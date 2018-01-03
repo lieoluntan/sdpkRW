@@ -57,7 +57,7 @@
 25. 左图是windows的chrome，右图是mac下的safari。显示布局都存在问题。
 
 
-27. 1,3是windows的chrome，2,4是mac的safari。
+27. 1,3是windows的chrome，2,4是mac的safari。（mac兼容问题）
 
 
 
