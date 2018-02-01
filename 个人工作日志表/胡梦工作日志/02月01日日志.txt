@@ -1,3 +1,5 @@
+
+工作任务编号 uipaike0201
 6、总览: 班主任今日课，老师今日课，班主任月课，老师月课------统一加上显示列----班级名称（对应字段claName）
 
 
@@ -29,3 +31,8 @@ c、点击（全校全部课）按钮：接口3：全校所有数据接口
 /sdpk/aaQueKeAll?qqiu=list
 http://localhost:8080/sdpk/aaQueKeAll?qqiu=list
 方式:GET
+
+周四验收
+自己验收(署名确认)：胡梦
+
+团队验收：

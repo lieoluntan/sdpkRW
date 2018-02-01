@@ -2,18 +2,6 @@
 0130排课系统修改任务：
 
 
-2、排课菜单：全校周课表，切换3个接口：（接口1:全校一天接口，接口2:全校一月接口，接口3:全校所有数据接口），分别对应不同的按钮事件  ----（胡梦）
-第一次是加载全校月接口
-a、点击日历的那一天切换：接口1:全校一天接口
-/sdpk/aaQueKe?qqiu=list
-
-b、点击日历切换月：接口2：全校一月接口
-http://localhost:8080/sdpk/aaQuery?qqiu=list&empUuid=allGet&year=2018&&month=01&&today=2018-01-03
-方式:GET
-
-c、点击（全校全部课）按钮：接口3：全校所有数据接口
-/sdpk/aaQueKeAll?qqiu=list
-方式:GET
 
 3、
 
