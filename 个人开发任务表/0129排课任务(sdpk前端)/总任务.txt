@@ -7,9 +7,7 @@
 
 3、
 
-4.部门管理和现有创建/编辑员工时的部门下拉框的关联 (员工里面的部门下拉框改成url形式，用部门list接口，下拉框nameValue和textValue都用部门name字段)
-http://localhost:8080/sdpk/aaDepartment?qqiu=list
-请求方法:GET
+
 
 
 
