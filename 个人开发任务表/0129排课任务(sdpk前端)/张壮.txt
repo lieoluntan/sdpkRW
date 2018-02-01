@@ -5,3 +5,16 @@
 5.关联合同时下拉框内的数据显示别名，老数据的转换。(后端接口已开发，具体发)
 http://localhost:8080/sdpk/aaMyContrtext?qqiu=nameTcnameList
 请求方法:GET
+
+1、财务菜单：第一部分：合同列表加载列表使用新list接口加载数据，第二部分：合同编辑请求getOne接口加载数据  ----（张壮）
+第一部分接口：
+所有合同列表查询
+http://localhost:8080/sdpk/aaMyContrtext?qqiu=speedList
+请求方法:GET
+
+第二部分接口：
+合同单个查询
+http://localhost:8080/sdpk/aaContrtext?qqiu=getOne
+请求方法:POST
+请求主体:
+{"uuid":"edit9001"}
