@@ -12,9 +12,7 @@ http://localhost:8080/sdpk/aaDepartment?qqiu=list
 请求方法:GET
 
 
-5.关联合同时下拉框内的数据显示别名，老数据的转换。(后端接口已开发，具体发)
-http://localhost:8080/sdpk/aaMyContrtext?qqiu=nameTcnameList
-请求方法:GET
+
 
 
 
