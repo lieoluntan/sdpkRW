@@ -18,6 +18,12 @@ http://localhost:8080/sdpk/aaContrtext?qqiu=getOne
 第一次是加载全校月接口
 a、点击日历的那一天切换：接口1:全校一天接口
 /sdpk/aaQueKe?qqiu=list
+http://localhost:8080/sdpk/aaQueKe?qqiu=list
+请求方式：post
+请求主体:
+{
+	"keDateTime":"2017-12-17"
+}
 
 b、点击日历切换月：接口2：全校一月接口
 http://localhost:8080/sdpk/aaQuery?qqiu=list&empUuid=allGet&year=2018&&month=01&&today=2018-01-03
@@ -25,6 +31,7 @@ http://localhost:8080/sdpk/aaQuery?qqiu=list&empUuid=allGet&year=2018&&month=01&
 
 c、点击（全校全部课）按钮：接口3：全校所有数据接口
 /sdpk/aaQueKeAll?qqiu=list
+http://localhost:8080/sdpk/aaQueKeAll?qqiu=list
 方式:GET
 
 3、
