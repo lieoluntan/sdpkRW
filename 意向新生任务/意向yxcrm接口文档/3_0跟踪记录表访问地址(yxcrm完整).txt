@@ -45,7 +45,9 @@ Content-Type: application/json;charset=UTF-8
 请求主体:
 
 {
-"yxstuUuid":"aaac","recordDate":"2018-01-20","remarkText":"aaa"
+"yxstuUuid":"aaac","recordDate":"2018-01-20","remarkText":"aaa",
+    "userUuid":"aaa",
+    "userName":"AAA"
 }
 
 响应：
@@ -62,13 +64,33 @@ http://localhost:8080/YXcrm/aaRecord?qqiu=delete
 Content-Type: application/json;charset=UTF-8
 
 请求主体:
-{"uuid":"uu001"}
+{"uuid":"uu001",
+    "userUuid":"aaa",
+    "userName":"AAA"}
 
 响应：
 status:200 OK
 {"message":"信息值：成功","qingqiu":"delete删除","data":["uu001"]}
 -------------------------------------------------------------
 
+-------------------------------------------------------------
+
+7.2.2 跟踪记录表删除（根据ditchUuid）
+http://localhost:8080/YXcrm/aaRecord?qqiu=deleteByYxstuUid
+
+请求方法:POST
+
+请求头:
+Content-Type: application/json;charset=UTF-8
+
+请求主体:
+{"yxstuUuid":"uu001",
+    "userUuid":"aaa",
+    "userName":"AAA"}
+
+响应：
+status:200 OK
+{"message":"信息值：成功","qingqiu":"uu001渠道delete删除8条","data":["uu001渠道delete删除8条"]}
 -------------------------------------------------------------
 
 7.3 跟踪记录表修改
@@ -82,7 +104,9 @@ Content-Type: application/json;charset=UTF-8
 请求主体:
 {
 "uuid":"edit9001",
-"recordDate":"2018-01-02","remarkText":"aaa"
+"recordDate":"2018-01-02","remarkText":"aaa",
+    "userUuid":"aaa",
+    "userName":"AAA"
 }
 
 响应：
@@ -115,4 +139,91 @@ status:200 OK
 
 -------------------------------------------------------------
 
-备注：列表查询接口在3_1 (补充查询接口中)
+7.5 跟踪记录表列表查询
+http://localhost:8080/YXcrm/aaRecord?qqiu=list
+
+请求方法:GET
+
+请求头:
+Content-Type: application/json;charset=UTF-8
+
+请求主体:
+
+
+响应：
+status:200 OK
+{
+"message":"信息值：成功",
+"qingqiu":"list查询列表",
+"data":[{"uuid":"edit9001","ditchUuid":"aaa123","ditchName":"渠道A","recordDate":"aaa","remarkText":"aaa"},{"uuid":"edit9001","ditchUuid":"aaa123","ditchName":"渠道B","recordDate":"aaa","remarkText":"aaa"}]
+}
+
+
+
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+
+7.5 跟踪记录表列表查询
+http://localhost:8080/YXcrm/aaRecord?qqiu=listByDitchUid
+
+请求方法:GET
+
+请求头:
+Content-Type: application/json;charset=UTF-8
+
+请求主体:
+{"yxstuUuid":"uu001"}
+
+响应：
+status:200 OK
+{
+"message":"信息值：成功",
+"qingqiu":"list查询列表",
+"data":[{"uuid":"edit9001","ditchUuid":"aaa123","ditchName":"渠道A","recordDate":"aaa","remarkText":"aaa"},{"uuid":"edit9001","ditchUuid":"aaa123","ditchName":"渠道A","recordDate":"aaa","remarkText":"aaa"}]
+}
+
+
+
+-------------------------------------------------------------
+
+0131新增开关接口
+
+
+-------------------------------------------------------------
+
+2 开关
+
+http://localhost:8080/YXcrm/aaRecord?qqiu=on_off
+
+
+请求方法:POST
+
+请求头:
+Content-Type: application/json;charset=UTF-8
+
+请求主体:
+{"uuid":"12d24424-cd2a-478c-b3a1-b6da27152f6a","openAndclose":"open"}
+
+或者
+
+请求主体:
+{"uuid":"12d24424-cd2a-478c-b3a1-b6da27152f6a","openAndclose":"close"}
+
+----------------------
+
+
+响应：
+status:200 OK
+{"message":"操作成功：已打开","qingqiu":"on"}
+
+
+响应：
+status:200 OK
+{"message":"操作成功：已关闭","qingqiu":"off"}
+
+
+status:200 OK
+{"message":"操作失败：开关参数不规范(close)，联系前端开发","qingqiu":"err"}
+
+

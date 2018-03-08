@@ -1,5 +1,5 @@
 *************************************************************
-
+userdb_yxcrm
 7、意向学员访问地址
 
 YXcrm
@@ -52,21 +52,25 @@ Content-Type: application/json;charset=UTF-8
     "phone":"aaa",
     "grade":"aaa",
     "school":"aaa",
-    "weixin":"aaa",
+    "weixin":"p111",
     "parentRela":"aaa",
     "parentName":"aaa",
     "parentPhone":"aaa",
-    "parentWeixin":"aaa",
+    "parentWeixin":"p222",
 
     "parentRela2":"aaa",
     "parentName2":"aaa",
     "parentPhone2":"aaa",
-    "parentWeixin2":"aaa",
+    "parentWeixin2":"p333",
 
     "empUuid":"aaa",
     "rank":"aaa",
     "source":"aaa",
-    "courseYX":"aaa"
+    "courseYX":"aaa",
+    "studentID": 001,
+    "userUuid":"aaa",
+    "userName":"AAA"
+    
 
 }
 
@@ -74,6 +78,8 @@ Content-Type: application/json;charset=UTF-8
 响应：
 status:200 OK
 {"message":"信息值：成功","qingqiu":"add新增","data":["b871a880-b501-46e5-95a9-b009c69b270a"]}
+
+备份：
 -------------------------------------------------------------
 
 7.2 意向学员删除
@@ -85,7 +91,11 @@ http://localhost:8080/YXcrm/aaYXstudent?qqiu=delete
 Content-Type: application/json;charset=UTF-8
 
 请求主体:
-{"uuid":"uu001"}
+{
+ "uuid":"uu001",
+ "userUuid":"aaa",
+ "userName":"AAA"
+}
 
 响应：
 status:200 OK
@@ -122,7 +132,10 @@ Content-Type: application/json;charset=UTF-8
     "empUuid":"aaac",
     "rank":"aaac",
     "source":"aaac",
-    "courseYX":"aaac"
+    "courseYX":"aaac",
+    "studentID":001,
+    "userUuid":"aaa",
+    "userName":"AAA"
 
 }
 
@@ -264,3 +277,53 @@ status:200 OK
 
 status:200 OK
 {"message":"操作失败：开关参数不规范(close)，联系前端开发","qingqiu":"err"}
+
+--------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------
+新接口 7.10 学号修改
+http://localhost:8080/YXcrm/aaYXstudent?qqiu=editstuID
+
+请求方法:POST
+
+请求头:
+Content-Type: application/json;charset=UTF-8
+
+请求主体:
+{
+    "uuid":"31a92e3e-83a8-460e-92dd-97698b99f9ca",
+    "studentID":001
+
+}
+
+
+--------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------
+
+新接口 7.11  查询数据库里最大学号
+http://localhost:8080/YXcrm/aaYXstudent?qqiu=getMaxStuID
+
+请求方法:GET
+
+响应：
+status:200 OK
+
+{
+    "message": "查询学号成功",
+    "qingqiu": "学号查询",
+    "data": [
+        {
+            "studentID": 300
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
