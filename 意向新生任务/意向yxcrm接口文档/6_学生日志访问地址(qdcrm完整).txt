@@ -92,3 +92,4 @@ status:200 OK
 
 -------------------------------------------------------------
 
+select t_yxstudent  left join t_employee  on t_yxstudent.empUuid = t_employee.uuid
